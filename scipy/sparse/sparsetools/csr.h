@@ -1130,7 +1130,7 @@ void csr_matvec(const I n_row,
     for(I i = 0; i < n_row; i++){
         T sum = Yx[i];
         for(I jj = Ap[i]; jj < Ap[i+1]; jj++){
-            sum += Ax[jj] * Xx[Aj[jj]];
+            sum += Xx[Aj[jj]];
         }
         Yx[i] = sum;
     }
